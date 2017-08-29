@@ -1,5 +1,6 @@
 // require Express, the framework we'll use for building
 const express = require('express');
+require('dotenv').config();
 
 // create a new app
 const app = express();
