@@ -7,4 +7,3 @@ CREATE TABLE posts (
 
 
  -- ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
