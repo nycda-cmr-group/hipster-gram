@@ -7,8 +7,6 @@ const Post = sequelize.define('post', {
 	desc: {type: sequelize.STRING(150), allowNull: true}
 })
 
-sequelize model:create --name post --attributes "image_loc:string, desc:string, user_id:integer";
-
 
 
 // CREATE TABLE `comments` (
