@@ -1,10 +1,7 @@
-// require Express, the framework we'll use for building
 const express = require('express');
-require('dotenv').config();
-
-// create a new app
 const app = express();
-
+const db = require('./models');
+require('dotenv').config();
 const port = process.env.PORT || 8080;
 
 // we must use middleware for that, this package does that for us
@@ -31,5 +28,20 @@ app.get('/', function(req,res){
 })
 
 const server = app.listen(port, () => {
-    console.log(`started port ${port}`)
+    console.log(`started port ${port}`);
+
+    // console.log to test db connection
+    console.log(db.post);
+
+    // post fake data to make sure 
+    db.post.create({
+    	image_loc: 'https://unsplash.com/?photo=kQzFr1JqSKM',
+	    desc: 'lion king',
+	    user_id: 1
+    }).
+    then(function(data){
+    	console.log(data);
+    },function(err){
+    	console.log(err);
+    })
 });

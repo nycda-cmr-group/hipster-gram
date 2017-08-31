@@ -2,11 +2,10 @@ const dotenv = require('dotenv').config();
 
 module.exports = {
   development: {
-    url: process.env.DATABASE_URL,
-    dialect: 'mysql',
-    multipleStatements: true,
-    define: {
-      underscored: true
-    },
+  	username: 'root',
+  	database: 'hipstergram',
+  	password: 'Suntan73!',
+  	host: '127.0.0.1',
+  	dialect: 'mysql'
   },
 }

@@ -7,7 +7,12 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+
+        // checking to determine contents of models data
+        console.log(models);
+
+        // this is a 1 to 1 relationship where a post has 1 user
+        post.belongsTo(models.users);
       }
     }
   });
