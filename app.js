@@ -32,16 +32,4 @@ const server = app.listen(port, () => {
 
     // console.log to test db connection
     console.log(db.post);
-
-    // post fake data to make sure 
-    db.post.create({
-    	image_loc: 'https://unsplash.com/?photo=kQzFr1JqSKM',
-	    desc: 'lion king',
-	    user_id: 1
-    }).
-    then(function(data){
-    	console.log(data);
-    },function(err){
-    	console.log(err);
-    })
 });

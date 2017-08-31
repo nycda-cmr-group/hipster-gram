@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var users = sequelize.define('users', {
+  var user = sequelize.define('user', {
     email_username: DataTypes.STRING,
     password: DataTypes.STRING
   }, {
@@ -10,5 +10,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return users;
+    // extracted sync to separate file test_db.js
+  // user.sync({alter: true});
+  return user;
 };
